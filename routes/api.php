@@ -13,7 +13,9 @@ use App\Http\Controllers\AuthController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/', [AuthController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
